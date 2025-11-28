@@ -1,0 +1,42 @@
+Core power time‑series + faults
+Use these for:
+	•	electrical_measurements (currents, voltages, frequency, power, energy)
+	•	meta IDs
+	•	fault / event labels and windows
+	•	PSML multi‑scale power system time‑series (loads, PMU synchrophasors, many disturbances). Download (Zenodo ZIP): 
+https://zenodo.org/records/5130612 
+	•	Multi-scale time-series dataset with benchmark (paper + links, same PSML dataset with context and tasks): 
+    https://www.nature.com/articles/s41597-022-01455-7 
+	•	PMU Dataset for Power Line Fault Detection (Kaggle; three‑phase V, I, frequency, fault labels): 
+    https://www.kaggle.com/datasets/programmer3/pmu-dataset-for-power-line-fault-detection 
+	•	Transmission line PMU fault data (Dryad; CSV with time‑series of various grid scenarios and fault types): 
+    https://datadryad.org/dataset/doi:10.5061/dryad.x69p8czq3 
+
+Smart‑grid operational / asset monitoring
+These give you realistic smart‑grid “asset-level” data you can map to breaker_id, feeder_id, panel_id, etc.
+	•	Smart Grid Real‑Time Load Monitoring Dataset (Kaggle; time‑series voltage, current, power, stability indicators): https:
+  //www.kaggle.com/datasets/ziya07/smart-grid-real-time-load-monitoring-dataset 
+	•	Smart Grid Monitoring Dataset (Kaggle; simulated monitoring data with voltage, current, frequency, power, asset IDs): https:
+  //www.kaggle.com/datasets/ziya07/smart-grid-monitoring-dataset 
+	•	Smart Grid Asset Monitoring Dataset (Kaggle; asset identifiers, health/operational status): https:
+  //www.kaggle.com/datasets/ziya07/smart-grid-asset-monitoring-dataset 
+
+Breaker‑like fault and event behavior
+Use these to define labels such as operating_state_label, fault_type_label, nuisance_trip_flag, etc.
+	•	Real-time fault detection and classification dataset for power systems (three‑phase V/I with event‑level labels; 
+    journal page links to data repository):
+  https://www.sciencedirect.com/science/article/pii/S2590123025035352 
+	•	PMU‑based transmission line fault classification dataset (PLOS ONE article with open time‑series data): 
+  https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295144 
+
+Breaker‑like fault and event behavior
+Use these to define labels such as operating_state_label, fault_type_label, nuisance_trip_flag, etc.
+	•	Real-time fault detection and classification dataset for power systems (three‑phase V/I with event‑level labels; 
+    journal page links to data repository): https://www.sciencedirect.com/science/article/pii/S2590123025035352 
+	•	PMU‑based transmission line fault classification dataset (PLOS ONE article with open time‑series data): 
+    https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295144 
+
+How to use them against your schema
+	•	Map PSML / PMU / smart‑grid CSV fields to your sensor_data (phase currents, voltages, frequency, power, power_factor/“stability”) and meta IDs.
+	•	Use event/fault labels and timestamps from the PMU and fault‑classification datasets to build event_and_trip_logs, condition_labels, and outcome_labels (e.g., “fault within 7 days”).
+	•	Use Smart Grid Asset Monitoring fields for breaker_id / feeder_id / panel_id style identifiers and basic health_state_label proxies.
