@@ -1,3 +1,7 @@
+Deepseek Reference: https://chat.deepseek.com/share/hwqy40vikffkoxihcw this link has access further list of data refereces and approach
+
+
+
 Core power time‑series + faults
 Use these for:
 	•	electrical_measurements (currents, voltages, frequency, power, energy)
@@ -28,13 +32,6 @@ Use these to define labels such as operating_state_label, fault_type_label, nuis
   https://www.sciencedirect.com/science/article/pii/S2590123025035352 
 	•	PMU‑based transmission line fault classification dataset (PLOS ONE article with open time‑series data): 
   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295144 
-
-Breaker‑like fault and event behavior
-Use these to define labels such as operating_state_label, fault_type_label, nuisance_trip_flag, etc.
-	•	Real-time fault detection and classification dataset for power systems (three‑phase V/I with event‑level labels; 
-    journal page links to data repository): https://www.sciencedirect.com/science/article/pii/S2590123025035352 
-	•	PMU‑based transmission line fault classification dataset (PLOS ONE article with open time‑series data): 
-    https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295144 
 
 How to use them against your schema
 	•	Map PSML / PMU / smart‑grid CSV fields to your sensor_data (phase currents, voltages, frequency, power, power_factor/“stability”) and meta IDs.
